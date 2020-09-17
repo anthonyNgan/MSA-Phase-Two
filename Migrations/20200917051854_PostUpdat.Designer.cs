@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using chiropractordashboard.Data;
 
 namespace chiropractordashboard.Migrations
 {
     [DbContext(typeof(ChiropractorContext))]
-    partial class ChiropactorContextModelSnapshot : ModelSnapshot
+    [Migration("20200917051854_PostUpdat")]
+    partial class PostUpdat
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

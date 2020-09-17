@@ -9,10 +9,8 @@ namespace chiropractordashboard.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int chiropractorId { get; set; }
-        [Required, MaxLength(100)]
         public string firstName { get; set; }
         public string lastName { get; set; }
-        [Required]
         public string emailAddress { get; set; }
         public int phoneNumber { get; set; }
         [Timestamp]

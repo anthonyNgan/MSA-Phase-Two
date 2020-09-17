@@ -47,7 +47,7 @@ namespace chiropractordashboard
             {
                 options.AddPolicy(MyAllowedSpecificOrigin, builder =>
                 {
-                    builder.WithOrigins("http://localhost:3000", "frontend.com")
+                    builder.WithOrigins("http://localhost:3000", "https://chiropractor-api.azurewebsites.net/")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .SetIsOriginAllowed((host) => true)
