@@ -8,7 +8,7 @@ trigger:
 - develop
 
 variables:
-  rootDir: 'view/app'
+  rootDir: '$(Build.SourcesDirectory)/View/app'
   buildDir: '$(rootDir)/build'
 
 pool:
