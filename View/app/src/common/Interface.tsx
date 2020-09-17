@@ -1,4 +1,5 @@
 ﻿export interface IChiropractors {
+    id: number;
     chiropractorId: number;
     firstName: string;
     lastname: string;

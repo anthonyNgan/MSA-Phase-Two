@@ -34,3 +34,39 @@ export const postArray = async (data: IChiropractors | {}) => {
             console.log('Error:', error);
         })
 }
+
+export const editArray = async (data: IChiropractors | {}) => {
+    const response = await fetch(Chiropractor_API_URL,  {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+            'Accept': "application/json",
+            'Content-Type': "application/json"
+        },
+    })
+    return response.json()
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.log('Error:', error);
+        })
+}
+
+export const deleteArray = async (data: IChiropractors | {}) => {
+    const response = await fetch(Chiropractor_API_URL + 'id', {
+        method: 'Delete',
+        body: JSON.stringify(data),
+        headers: {
+            'Accept': "application/json",
+            'Content-Type': "application/json"
+        },
+    })
+    return response.json()
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.log('Error:', error);
+        })
+}
