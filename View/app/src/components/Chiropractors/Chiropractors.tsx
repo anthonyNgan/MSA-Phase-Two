@@ -53,6 +53,7 @@ export const Chiropractors = () => {
                 {chiropractorDetails.map(x => <li key={x.chiropractorId}> {x.firstName} {x.lastName} {x.emailAddress} {x.phoneNumber} {x.timeCreated}</li>)}
 
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    <label>First Name</label>
                     <input
                         type="text"
                         id="firstName"
@@ -60,7 +61,7 @@ export const Chiropractors = () => {
                         onChange={ handleChange}
                     />
                     {errors.firstName && errors.firstName.message}
-
+                    <label>Last Name</label>
                     <input
                         
                         type="text"
