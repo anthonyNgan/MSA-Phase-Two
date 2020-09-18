@@ -31,8 +31,8 @@ const AppMenuItemRouter: React.FC<AppMenuRouterProps> = props => {
             component={forwardRef((props: NavLinkProps, ref: any) => <NavLink exact {...props} innerRef={ref} />)}
             to={link}
         />
-        
-        )
+
+    )
 }
 
 export default AppMenuItemRouter;

@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {makeStyles, createStyles} from '@material-ui/core/styles';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 import List from '@material-ui/core/List';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -40,15 +40,15 @@ const AppMenuItem: React.FC<AppMenuItemProps> = props => {
     const MenuItemRoot = (
         <AppMenuItemRouter className={classes.menuItem} link={link} onClick={handleClick}>
             {!!Icon && (
-            <ListItemIcon className={classes.menuItemIcon}>
-                <Icon />
-               </ListItemIcon>
+                <ListItemIcon className={classes.menuItemIcon}>
+                    <Icon />
+                </ListItemIcon>
             )}
-        <ListItemText primary={name} inset={!Icon} />
-        { isExpandable && !open && <IconExpandMore /> }
-        { isExpandable && open && <IconExpandLess /> }
+            <ListItemText primary={name} inset={!Icon} />
+            { isExpandable && !open && <IconExpandMore />}
+            { isExpandable && open && <IconExpandLess />}
         </AppMenuItemRouter>
-        )
+    )
 
     const MenuItemChildren = isExpandable ? (
         <Collapse in={open} timeout="auto" unmountOnExit>
@@ -69,9 +69,9 @@ const AppMenuItem: React.FC<AppMenuItemProps> = props => {
         </>
     )
 }
-            AppMenuItem.propTypes = AppMenuItemPropTypes
+AppMenuItem.propTypes = AppMenuItemPropTypes
 
-            const useStyles = makeStyles(theme =>
+const useStyles = makeStyles(theme =>
     createStyles({
         menuItem: {
             '&.active': {

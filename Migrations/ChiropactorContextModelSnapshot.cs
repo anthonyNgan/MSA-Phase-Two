@@ -47,6 +47,82 @@ namespace chiropractordashboard.Migrations
 
                     b.ToTable("chiropractor");
                 });
+
+            modelBuilder.Entity("chiropractordashboard.Models.order", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("chiropractorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("patientId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("patientId1")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<decimal>("price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("timeCreated")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("chiropractorId");
+
+                    b.HasIndex("patientId1");
+
+                    b.ToTable("order");
+                });
+
+            modelBuilder.Entity("chiropractordashboard.Models.patient", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("firstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("history")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("lastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("lastVisited")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("symptoms")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("timeCreated")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("patient");
+                });
+
+            modelBuilder.Entity("chiropractordashboard.Models.order", b =>
+                {
+                    b.HasOne("chiropractordashboard.Models.chiropractor", "chiropractor")
+                        .WithMany()
+                        .HasForeignKey("chiropractorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("chiropractordashboard.Models.patient", "patient")
+                        .WithMany()
+                        .HasForeignKey("patientId1");
+                });
 #pragma warning restore 612, 618
         }
     }

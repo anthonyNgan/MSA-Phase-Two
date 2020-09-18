@@ -9049,11 +9049,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\antho\\source\\repos\\chiropractordashboard\\chiropractordashboard\\chiropractordashboard.csproj",
+      "projectUniqueName": "C:\\Users\\antho\\source\\repos\\MSA-Phase-Two\\chiropractordashboard.csproj",
       "projectName": "chiropractordashboard",
-      "projectPath": "C:\\Users\\antho\\source\\repos\\chiropractordashboard\\chiropractordashboard\\chiropractordashboard.csproj",
+      "projectPath": "C:\\Users\\antho\\source\\repos\\MSA-Phase-Two\\chiropractordashboard.csproj",
       "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\antho\\source\\repos\\chiropractordashboard\\chiropractordashboard\\obj\\",
+      "outputPath": "C:\\Users\\antho\\source\\repos\\MSA-Phase-Two\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

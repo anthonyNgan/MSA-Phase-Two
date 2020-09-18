@@ -11,6 +11,9 @@ namespace chiropractordashboard.Data
         public ChiropractorContext() { }
         public ChiropractorContext(DbContextOptions<ChiropractorContext> options) : base(options) { }
         public DbSet<chiropractor> chiropractor { get; set; }
+        public DbSet<patient> patient { get; set; }
+        public DbSet<order> order { get; set; }
+
         public static System.Collections.Specialized.NameValueCollection AppSettings { get; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

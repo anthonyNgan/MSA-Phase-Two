@@ -43,7 +43,7 @@ const App: React.FC = () => {
                             }}
                         >
                             <AppMenu />
-                            <ToggleButton  selected={darkMode} onChange={() => setDarkMode(!darkMode)}>DarkMode</ToggleButton>
+                            <ToggleButton selected={darkMode} onChange={() => setDarkMode(!darkMode)}>DarkMode</ToggleButton>
                         </Drawer>
                         <main className={classes.content}>
                             <Container maxWidth="lg" className={classes.container}>
