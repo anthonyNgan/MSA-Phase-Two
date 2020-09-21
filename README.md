@@ -9,3 +9,13 @@ Alternative Method:
 Run localhost 
 Use NPM install
 NPM start
+
+Branch created after submission date to fix impending issues.
+
+*Update Datatypes in the database scheme.
+
+*Connect Front-End PUT and DELETE using FETCH API.
+
+*Re-attempt to add devops.
+
+*Look into adding new Features. (Testing, validation) 
