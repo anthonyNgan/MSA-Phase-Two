@@ -3,19 +3,16 @@
 /*const API_BASE_URL = process.env.NODE_ENV === "development" ? "https://chiropractor-api.azurewebsites.net/api/" : "https://localhost:44361/api/";*/
 const API_BASE_URL = process.env.NODE_ENV === "development" ? "https://localhost:44361/api/" : "https://chiropractor-api.azurewebsites.net/api/";
 const Chiropractor_API_URL = API_BASE_URL + "chiropractors/";
-const Chiropractor_ID_API_URL = `https://chiropractor-api.azurewebsites.net/api/chiropractors/{id}`;
+/*const Chiropractor_ID_API_URL = Chiropractor_API_URL + ${id};*/
 
 export const getArray = async () => {
-
     const response = await fetch(Chiropractor_API_URL, {
         headers: {
             'Accept': "application/json",
             'Content-Type': "application/json"
         },
     }).then((res) => res.json());
-
     return response;
-
 }
 
 export const postArray = async (data: IChiropractors | {}) => {
@@ -54,19 +51,13 @@ export const editArray = async (data: IChiropractors | {}) => {
         })
 }
 
-export const deleteArray = async (data: IChiropractors | {}) => {
-
-    const response = await fetch(Chiropractor_ID_API_URL, {
-        method: 'Delete',
-        body: JSON.stringify(data),
-        headers: {
-            'Accept': "application/json",
-            'Content-Type': "application/json"
-        },
+export const deleteArray = async (id: IChiropractors | {}) => {
+    const response = await fetch(Chiropractor_API_URL + `${ id }`, {
+        method: 'DELETE',
     })
     return response.json()
-        .then(data => {
-            console.log('Success:', data);
+        .then(id => {
+            console.log('Success:', id);
         })
         .catch((error) => {
             console.log('Error:', error);
