@@ -33,10 +33,15 @@ export const postArray = async (data: IChiropractors | {}) => {
         })
 }
 
-export const editArray = async (data: IChiropractors | {}) => {
-    const response = await fetch(Chiropractor_API_URL, {
+export const editArray = async (id: any | {}) => {
+    const response = await fetch(Chiropractor_API_URL + `${id}`, {
         method: 'PUT',
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+            chiropractorId: 5,
+            firstname: 'WHO',
+            lastname: 'WHO',
+
+        }), 
         headers: {
             'Accept': "application/json",
             'Content-Type': "application/json"

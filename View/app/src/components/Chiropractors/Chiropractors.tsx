@@ -1,7 +1,7 @@
 ﻿import React, { useState, useEffect, ChangeEvent } from 'react';
 import { IChiropractors } from '../../common/Interface';
 
-import { getArray, postArray, deleteArray } from '../../api/api';
+import { getArray, postArray, editArray, deleteArray } from '../../api/api';
 import { useForm } from "react-hook-form";
 
 import { Button, TextField } from "@material-ui/core/";
@@ -10,8 +10,8 @@ export const Chiropractors = () => {
 
     const [chiropractorDetails, setchiropractorDetails] = useState<any[]>([]);
     const [formData, setFormData] = useState<any[]>([]);
-    const {handleSubmit, errors } = useForm<IChiropractors>();
-    
+    const { handleSubmit, errors } = useForm<IChiropractors>();
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
         console.log(formData)
@@ -25,6 +25,11 @@ export const Chiropractors = () => {
     const deletePost = async (id: any) => {
         await deleteArray(id)
     };
+
+    const editPost = async (id: any | {}) => {
+        console.log(id);
+        await editArray(id)
+    }
    
     const handleRemoveItem = (data: number | {}) => {
         deleteArray(data);
@@ -36,7 +41,7 @@ export const Chiropractors = () => {
             setchiropractorDetails(await getArray());
         }
         makeArrayRequest();
-    }, [handleChange, deletePost])
+    }, [handleChange, deletePost, editPost])
 
 
     return (
@@ -73,9 +78,9 @@ export const Chiropractors = () => {
 
                 <Button variant="contained" color="primary" type="submit" value="Submit">Submit</Button>
 
-                <Button variant="contained" color="default" onClick={() => deletePost(1)}> Update</Button>
+                <Button variant="contained" color="default" onClick={() => editPost(5)}>Update</Button>
 
-                <Button variant="contained" color="secondary" onClick={() => handleRemoveItem(1)}> Delete</Button>
+                <Button variant="contained" color="secondary" onClick={() => deletePost(1)}> Delete</Button>
             </form>
         </>
     )
