@@ -1,12 +1,32 @@
 ﻿import React from 'react';
-import { Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles'
+import { Typography, Card, CardContent, CardActions, Grid } from '@material-ui/core';
+
+const useStyles = makeStyles({
+    root: {
+        minWidth: 275,
+    }
+})
 
 const Dashboard = () => {
+    const classes = useStyles();
+
     return (
         <>
-            <Typography>Hello there,
-            Check on the Menu.
-            Secret mode if you search.</Typography>
+            <Card className={classes.root }>
+                <CardContent>
+                    <Grid
+                        container
+                        justify="space-between"
+                        spacing={3}
+                    >
+                        hel
+                    </Grid>
+                    <CardActions>
+                        60
+                    </CardActions>
+                </CardContent>
+            </Card>
         </>
     )
 

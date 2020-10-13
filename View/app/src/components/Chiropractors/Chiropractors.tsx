@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, ChangeEvent } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { IChiropractors } from '../../common/Interface';
 
 import { getArray, postArray, editArray, deleteArray } from '../../api/api';
