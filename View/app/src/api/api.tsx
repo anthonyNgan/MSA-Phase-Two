@@ -1,9 +1,11 @@
-﻿import { IChiropractors } from '../common/Interface';
+﻿import Axios from 'axios';
+import { IChiropractors, ICalendar } from '../common/Interface';
 
 /*const API_BASE_URL = process.env.NODE_ENV === "development" ? "https://chiropractor-api.azurewebsites.net/api/" : "https://localhost:44361/api/";*/
-const API_BASE_URL = process.env.NODE_ENV === "development" ? "https://chiropractor-api.azurewebsites.net/api/" : "https://localhost:44361/api/";
+const API_BASE_URL = process.env.NODE_ENV === "development" ? "https://localhost:44361/api/" : "https://chiropractor-api.azurewebsites.net/api/";
 const Chiropractor_API_URL = API_BASE_URL + "chiropractors/";
 /*const Chiropractor_ID_API_URL = Chiropractor_API_URL + ${id};*/
+const Calendar_API_URL = API_BASE_URL + "calendars/";
 
 export const getArray = async () => {
     const response = await fetch(Chiropractor_API_URL, {
@@ -67,4 +69,15 @@ export const deleteArray = async (id: IChiropractors | {}) => {
         .catch((error) => {
             console.log('Error:', error);
         })
+}
+
+export const calendarEvents = async (id: ICalendar | {}) => {
+    const response = await Axios.get('Calendar_API_URL')
+        .then(response => {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
+    return response
 }

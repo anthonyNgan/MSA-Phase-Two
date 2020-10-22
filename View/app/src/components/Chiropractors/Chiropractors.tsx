@@ -30,11 +30,7 @@ export const Chiropractors = () => {
         console.log(id);
         await editArray(id)
     }
-   
-    const handleRemoveItem = (data: number | {}) => {
-        deleteArray(data);
 
-    };
 
     useEffect(() => {
         const makeArrayRequest = async () => {

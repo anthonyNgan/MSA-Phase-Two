@@ -9,12 +9,15 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import ToggleButton from '@material-ui/lab/ToggleButton';
+import {Button} from '@material-ui/core';
 
 import AppMenu from '../src/components/AppMenu/AppMenu';
 import Dashboard from '../src/components/Dashboard/Dashboard';
 import Chiropractors from '../src/components/Chiropractors/Chiropractors';
 import Patients from '../src/components/Patients/Patients';
 import SocialMedia from '../src/components/Share/SocialMedia';
+
+import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 
 const PageDashboard = () => <Dashboard />
 const PageChiropractors = () => <Chiropractors />
@@ -30,6 +33,10 @@ const App: React.FC = () => {
             type: darkMode ? "dark" : "light",
         },
     });
+    
+    const { loginWithRedirect } = useAuth0();
+    const { logout } = useAuth0();
+
     //clsx allows us to compose string class names
     return (
         <ThemeProvider theme={theme}>
@@ -41,6 +48,8 @@ const App: React.FC = () => {
                             <AppMenu />
                             <ToggleButton selected={darkMode} onChange={() => setDarkMode(!darkMode)}>DarkMode</ToggleButton>
                             <SocialMedia />
+                            <Button onClick={() => loginWithRedirect()}>Log In</Button>
+                            <Button onClick={() => logout({returnTo: window.location.origin})}>Log Out</Button>
                         </Drawer>
                         <main className={classes.content}>
                             <Container maxWidth="lg" className={classes.container}>
@@ -51,7 +60,6 @@ const App: React.FC = () => {
                                     <Route path="/patients" component={PagePatients} />
                                 </Switch>
                             </Container>
-                            
                         </main>
                     </div>
                 </BrowserRouter>
@@ -87,4 +95,4 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default App;
+export default withAuthenticationRequired(App);
