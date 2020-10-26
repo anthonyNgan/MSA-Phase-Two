@@ -19,3 +19,7 @@ Branch created after submission date to fix impending issues.
 *Re-attempt to add devops.
 
 *Look into adding new Features. (Testing, validation) 
+
+
+Login: admin9000@yopmail.com
+Pass: !Admin123
