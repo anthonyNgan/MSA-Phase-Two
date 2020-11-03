@@ -12,3 +12,12 @@
     values: any;
     errors: any;
 }
+
+export interface ICalendar {
+    id: number;
+
+}
+
+export interface IProps{
+    isAuthenticated: boolean;
+}
