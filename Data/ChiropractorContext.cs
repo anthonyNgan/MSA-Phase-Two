@@ -13,6 +13,7 @@ namespace chiropractordashboard.Data
         public DbSet<chiropractor> chiropractor { get; set; }
         public DbSet<patient> patient { get; set; }
         public DbSet<order> order { get; set; }
+        public DbSet<calendar> calendar { get; set; }
 
         public static System.Collections.Specialized.NameValueCollection AppSettings { get; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
