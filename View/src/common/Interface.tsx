@@ -11,6 +11,8 @@
     data: any;
     values: any;
     errors: any;
+
+    MaterialTable: any;
 }
 
 export interface ICalendar {

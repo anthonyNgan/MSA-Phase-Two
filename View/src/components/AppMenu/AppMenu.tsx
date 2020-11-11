@@ -20,14 +20,14 @@ const appMenuItems = [
         Icon: IconDashBoard,
     },
     {
-        name: 'Orders',
-        link: '/orders',
-        Icon: IconShoppingCart,
-    },
-    {
         name: 'Chiropractor List',
         link: '/chiropractors',
         Icon: IconChiropractor,
+    },
+    {
+        name: 'Orders',
+        link: '/orders',
+        Icon: IconShoppingCart,
     },
     {
         name: 'Patient List',

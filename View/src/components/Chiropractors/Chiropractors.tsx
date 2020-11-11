@@ -2,9 +2,10 @@
 import { IChiropractors } from '../../common/Interface';
 
 import { getArray, postArray, editArray, deleteArray } from '../../api/api';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 
 import { Button, TextField } from "@material-ui/core/";
+import MaterialTable from "material-table";
 
 export const Chiropractors = () => {
 
@@ -42,17 +43,9 @@ export const Chiropractors = () => {
 
     return (
         <>
-            <h3>List of Chiropractors</h3>
-            {chiropractorDetails.map(x => <li key={x.chiropractorId}> {x.firstName} {x.lastName} {x.emailAddress} {x.phoneNumber} {x.timeCreated}</li>)}
-
+            
             <h3>Add new Chiropractor</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <label>Id: </label>
-                <TextField
-                    type="text"
-                    id="id"
-                    name="ID"
-                />
                 <label>First Name: </label>
                 <TextField
                     type="text"
@@ -72,12 +65,51 @@ export const Chiropractors = () => {
                 />
                 {errors.lastname && errors.lastname.message}
 
-                <Button variant="contained" color="primary" type="submit" value="Submit">Submit</Button>
-
-                <Button variant="contained" color="default" onClick={() => editPost(5)}>Update</Button>
-
-                <Button variant="contained" color="secondary" onClick={() => deletePost(1)}> Delete</Button>
+                <Button variant="contained" color="primary" type="submit" value="Submit">Add New</Button>
             </form>
+            
+            <MaterialTable
+          columns={[
+            { title: "First Name", field: "name" },
+            { title: "Last Name", field: "surname" },
+            { title: "Doğum Yılı", field: "birthYear", type: "numeric" },
+            {
+              title: "Doğum Yeri",
+              field: "birthCity",
+              lookup: { 34: "İstanbul", 63: "Şanlıurfa" },
+            },
+          ]}
+          data={[
+            {
+              name: "Mehmet",
+              surname: "Baran",
+              birthYear: 1987,
+              birthCity: 63,
+            },
+          ]}
+          title="List of Chiropractors"
+          actions={[
+            {
+              icon: 'save',
+              tooltip: 'Save User',
+              onClick: (event, rowData) => {
+                // Do save operation
+              }
+            }
+          ]}
+        />
+
+            {chiropractorDetails.map(
+                x => <li key={x.chiropractorId}> {x.firstName} {x.lastName} {x.emailAddress} {x.phoneNumber} {x.timeCreated}                 
+                <Button variant="contained" color="default" onClick={() => editPost(x.chiropractorId)}>Update</Button>
+                <Button variant="contained" color="secondary" onClick={() => deletePost(x.chiropractorId)}> Delete</Button>
+
+                </li>
+                
+            )}
+
+        
+ 
         </>
     )
 }

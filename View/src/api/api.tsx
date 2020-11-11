@@ -2,7 +2,7 @@
 import { IChiropractors, ICalendar } from '../common/Interface';
 
 /*const API_BASE_URL = process.env.NODE_ENV === "development" ? "https://chiropractor-api.azurewebsites.net/api/" : "https://localhost:44361/api/";*/
-const API_BASE_URL = process.env.NODE_ENV === "development" ? "https://localhost:44361/api/" : "https://chiropractor-api.azurewebsites.net/api/";
+const API_BASE_URL = process.env.NODE_ENV === "development" ? "https://chiropractor-api.azurewebsites.net/api/" : "https://localhost:44361/api/";
 const Chiropractor_API_URL = API_BASE_URL + "chiropractors/";
 /*const Chiropractor_ID_API_URL = Chiropractor_API_URL + ${id};*/
 const Calendar_API_URL = API_BASE_URL + "calendars/";

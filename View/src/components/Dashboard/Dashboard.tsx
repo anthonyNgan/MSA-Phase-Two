@@ -17,7 +17,10 @@ const useStyles = makeStyles({
 
 const Dashboard = () => {
     const classes = useStyles();
+    const {user} = useAuth0();
     const [data, setData] = useState<any[]>([]);
+
+    const {} = calendarEvents(1);
     
 
    /* useEffect(() => {
@@ -57,7 +60,7 @@ const Dashboard = () => {
                         justify="space-between"
                         spacing={3}
                     >
-                        Hello Bro!
+                        Hello {user.nickname}!
                     </Grid>
                     <CardActions>
                         What do you have on today?

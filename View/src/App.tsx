@@ -35,8 +35,7 @@ const App: React.FC = () => {
     });
     
     const { loginWithRedirect } = useAuth0();
-    const { logout } = useAuth0();
-
+    const { logout, user } = useAuth0();
     //clsx allows us to compose string class names
     return (
         <ThemeProvider theme={theme}>
@@ -48,8 +47,7 @@ const App: React.FC = () => {
                             <AppMenu />
                             <ToggleButton selected={darkMode} onChange={() => setDarkMode(!darkMode)}>DarkMode</ToggleButton>
                             <SocialMedia />
-                            <Button onClick={() => loginWithRedirect()}>Log In</Button>
-                            <Button onClick={() => logout({returnTo: window.location.origin})}>Log Out</Button>
+                            <Button onClick={() => logout({returnTo: window.location.origin})}>Log Out {user.nickname}</Button>
                         </Drawer>
                         <main className={classes.content}>
                             <Container maxWidth="lg" className={classes.container}>
