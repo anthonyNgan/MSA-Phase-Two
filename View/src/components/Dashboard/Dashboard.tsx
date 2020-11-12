@@ -18,10 +18,14 @@ const useStyles = makeStyles({
 const Dashboard = () => {
     const classes = useStyles();
     const {user} = useAuth0();
-    const [data, setData] = useState<any[]>([]);
+    const [data, setData] = useState<any[]>([
 
-    const {} = calendarEvents(1);
-    
+    ]);
+    const Calendar = {
+        calendarEvents: [
+            {title: "Today Event", start: new Date() }
+        ]
+    }
 
    /* useEffect(() => {
         const getCalendarRequest = async () => {
@@ -56,14 +60,15 @@ const Dashboard = () => {
             <Card className={classes.root }>
                 <CardContent>
                     <Grid
-                        container
-                        justify="space-between"
-                        spacing={3}
+                       
+                    
                     >
                         Hello {user.nickname}!
                     </Grid>
                     <CardActions>
-                        What do you have on today?
+                        What do you have on today? 
+                        <br></br>
+                        Click on Calendar Schedule to add in events. And Delete me.
                     </CardActions>
                 </CardContent>
             </Card>
@@ -74,7 +79,7 @@ const Dashboard = () => {
             selectable={true}
             select={handleDateSelect}
             eventClick={handleEventClick}
-            events = {data}
+            events={Calendar.calendarEvents}
             />
         </>
     )
