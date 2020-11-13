@@ -39,16 +39,19 @@ export const editArray = async (id: any | {}) => {
     const response = await fetch(Chiropractor_API_URL + `${id}`, {
         method: 'PUT',
         body: JSON.stringify({
-           
-        }), 
+            chiropractorId: 48,
+            firstName: 'I have been Edited',
+            lastName: 'Edited',
+            emailAddress: 'Edited@hotmail.com',
+          }), 
         headers: {
             'Accept': "application/json",
             'Content-Type': "application/json"
         },
     })
     return response.json()
-        .then(id => {
-            console.log('Success:', id);
+        .then(data => {
+            console.log('Success:', data);
         })
         .catch((error) => {
             console.log('Error:', error);

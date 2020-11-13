@@ -32,6 +32,7 @@ export const Chiropractors = () => {
 
     const [chiropractorDetails, setchiropractorDetails] = useState<any[]>([]);
     const [formData, setFormData] = useState<any[]>([]);
+    const [editData, setEditData] = useState<any[]>([]);
     const { handleSubmit, errors } = useForm<IChiropractors>();
     const [isLoading, setIsLoading] = useState(false);
 
@@ -59,7 +60,10 @@ export const Chiropractors = () => {
     };
 
     const editPost = async (id: any | {}) => {
-        console.log(id);
+        setEditData({...editData})
+        postArray(formData)
+        console.log(editPost);
+        console.log(editData)
         await editArray(id)
     }
 
@@ -114,7 +118,7 @@ export const Chiropractors = () => {
                     onChange={handleChange}
                 /> */}
                 <Button variant="contained" color="primary" type="submit" value="Submit">Add New</Button>
-                <Button variant="contained" color="default" onClick={() => editPost(46)}>Update</Button>
+                <Button variant="contained" color="default" onClick={() => editPost(48)}>Update</Button>
 
             </form>
 
@@ -129,7 +133,9 @@ export const Chiropractors = () => {
                         tooltip: 'Edit User',
                         onClick: (event, rowData) => {
                             // Do save operation
-                            editPost(44)
+                            editPost(rowData.chiropractorId)
+                            console.log(rowData.chiropractorId)
+
                         }
                     },
                     {
