@@ -59,16 +59,13 @@ const Dashboard = () => {
         <>
             <Card className={classes.root }>
                 <CardContent>
-                    <Grid
-                       
-                    
-                    >
+                    <Grid>
                         Hello {user.nickname}!
                     </Grid>
                     <CardActions>
                         What do you have on today? 
                         <br></br>
-                        Click on Calendar Schedule to add in events. And Delete me.
+                        Click on calendar to create schedule events.
                     </CardActions>
                 </CardContent>
             </Card>
