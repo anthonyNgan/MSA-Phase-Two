@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import clsx from 'clsx';
 
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';

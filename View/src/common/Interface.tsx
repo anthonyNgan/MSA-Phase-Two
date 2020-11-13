@@ -13,6 +13,7 @@
     errors: any;
 
     MaterialTable: any;
+    Modal: any;
 }
 
 export interface ICalendar {
