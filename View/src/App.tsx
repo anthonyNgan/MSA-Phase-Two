@@ -14,6 +14,7 @@ import {Button} from '@material-ui/core';
 import AppMenu from '../src/components/AppMenu/AppMenu';
 import Dashboard from '../src/components/Dashboard/Dashboard';
 import Chiropractors from '../src/components/Chiropractors/Chiropractors';
+import Healing from '../src/components/Healing/Healing';
 import Patients from '../src/components/Patients/Patients';
 import SocialMedia from '../src/components/Share/SocialMedia';
 
@@ -21,8 +22,9 @@ import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 
 const PageDashboard = () => <Dashboard />
 const PageChiropractors = () => <Chiropractors />
-const PageOrders = () => <Typography variant="h3" component="h1">Orders Page</Typography>
 const PagePatients = () => <Patients />
+const PageHealing = () => <Healing/>
+
 
 
 const App: React.FC = () => {
@@ -54,7 +56,7 @@ const App: React.FC = () => {
                                 <Switch>
                                     <Route path="/" exact component={PageDashboard} />
                                     <Route path="/chiropractors" exact component={PageChiropractors} />
-                                    <Route path="/orders" component={PageOrders} />
+                                    <Route path="/orders" component={PageHealing} />
                                     <Route path="/patients" component={PagePatients} />
                                 </Switch>
                             </Container>

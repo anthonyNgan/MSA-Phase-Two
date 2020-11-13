@@ -9,7 +9,7 @@ import IconPeople from '@material-ui/icons/People';
 import IconBarChart from '@material-ui/icons/BarChart';
 import IconLibraryBooks from '@material-ui/icons/LibraryBooks';
 import IconChiropractor from '@material-ui/icons/VerifiedUser';
-
+import HealingIcon from '@material-ui/icons/Healing';
 
 import AppMenuItem from './AppMenuItem';
 
@@ -25,14 +25,14 @@ const appMenuItems = [
         Icon: IconChiropractor,
     },
     {
-        name: 'Orders',
-        link: '/orders',
-        Icon: IconShoppingCart,
-    },
-    {
         name: 'Patient List',
         link: '/patients',
         Icon: IconPeople,
+    },
+    {
+        name: 'Healing',
+        link: '/healing',
+        Icon: HealingIcon,
     },
     {
         name: 'Reports',

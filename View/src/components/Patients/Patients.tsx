@@ -1,10 +1,12 @@
-﻿import React from 'react';
+﻿import { Typography } from '@material-ui/core';
+import React from 'react';
 
 
 const Patients = () => {
     return (
         <>
-            Hello Patients
+            <Typography>Patient Portal</Typography>
+                <Typography>Will look similar and function similar (CRUD) to chiropractor list</Typography>
         </>
     )
 }

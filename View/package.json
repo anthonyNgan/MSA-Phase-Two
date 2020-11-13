@@ -21,10 +21,12 @@
     "axios": "^0.20.0",
     "material-table": "^1.69.1",
     "react": "^16.13.1",
+    "react-body-highlighter": "^1.0.5",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.8.2",
     "react-scripts": "3.4.3",
     "react-share": "^4.2.1",
+    "styled-components": "^5.2.1",
     "typescript": "^3.7.5"
   },
   "scripts": {
