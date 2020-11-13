@@ -1,0 +1,5 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0c210183-9e75-4f97-9298-4581305c2d78/resourceGroups/msa-2020-win/providers/Microsoft.Web/sites/DashboardChiropractor",
+    "appService.deploySubpath": "View\\build",
+    "git.ignoreLimitWarning": true
+}

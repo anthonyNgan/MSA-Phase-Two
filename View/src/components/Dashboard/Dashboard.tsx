@@ -1,4 +1,4 @@
-﻿import React  from 'react';
+﻿import React, {useState}  from 'react';
 import { makeStyles } from '@material-ui/core/styles'
 import {Card, CardContent, CardActions, Grid } from '@material-ui/core';
 import FullCalendar, {EventClickArg, DateSelectArg, EventApi} from '@fullcalendar/react';
@@ -15,10 +15,22 @@ const useStyles = makeStyles({
 })
 
 const Dashboard = () => {
-    
     const classes = useStyles();
     const {user} = useAuth0();
-   
+    const [data, setData] = useState<any[]>([]);
+    const Calendar = {
+        calendarEvents: [
+            {title: "Today Event", start: new Date() }
+        ]
+    }
+
+   /* useEffect(() => {
+        const getCalendarRequest = async () => {
+            setData(calendarEvents());
+        }
+        getCalendarRequest();
+    }, []);*/
+
     const handleEventClick = (clickInfo: EventClickArg) => {
           console.log("hello world")
           clickInfo.event.remove();
@@ -39,8 +51,7 @@ const Dashboard = () => {
             })
         }
     }
-
-
+    
     return (
         <>
             <Card className={classes.root }>
@@ -51,7 +62,7 @@ const Dashboard = () => {
                     <CardActions>
                         What do you have on today? 
                         <br></br>
-                        Click on calendar to create schedule events.
+                        Click on Calendar Schedule to add in events.
                     </CardActions>
                 </CardContent>
             </Card>
@@ -62,10 +73,10 @@ const Dashboard = () => {
             selectable={true}
             select={handleDateSelect}
             eventClick={handleEventClick}
+            events={Calendar.calendarEvents}
             />
         </>
     )
 
 }
-
 export default Dashboard;

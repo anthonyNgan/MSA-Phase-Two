@@ -166,10 +166,6 @@ C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\appsettings.De
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Chiropractor-api - Web Deploy\profile.arm.json
-C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\app\package-lock.json
-C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\app\package.json
-C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\app\public\manifest.json
-C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\app\tsconfig.json
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\chiropractordashboard.exe
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\chiropractordashboard.deps.json
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\chiropractordashboard.runtimeconfig.json
@@ -313,7 +309,6 @@ C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\runtimes\win-x
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\antho\source\repos\MSA-Phase-Two\obj\Debug\netcoreapp3.1\chiropractordashboard.csprojAssemblyReference.cache
 C:\Users\antho\source\repos\MSA-Phase-Two\obj\Debug\netcoreapp3.1\chiropractordashboard.AssemblyInfoInputs.cache
 C:\Users\antho\source\repos\MSA-Phase-Two\obj\Debug\netcoreapp3.1\chiropractordashboard.AssemblyInfo.cs
 C:\Users\antho\source\repos\MSA-Phase-Two\obj\Debug\netcoreapp3.1\chiropractordashboard.csproj.CoreCompileInputs.cache
@@ -326,3 +321,11 @@ C:\Users\antho\source\repos\MSA-Phase-Two\obj\Debug\netcoreapp3.1\staticwebasset
 C:\Users\antho\source\repos\MSA-Phase-Two\obj\Debug\netcoreapp3.1\chiropractordashboard.dll
 C:\Users\antho\source\repos\MSA-Phase-Two\obj\Debug\netcoreapp3.1\chiropractordashboard.pdb
 C:\Users\antho\source\repos\MSA-Phase-Two\obj\Debug\netcoreapp3.1\chiropractordashboard.genruntimeconfig.cache
+C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\build\asset-manifest.json
+C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\build\manifest.json
+C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\package-lock.json
+C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\package.json
+C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\public\manifest.json
+C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\tsconfig.json
+C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\build\web.config
+C:\Users\antho\source\repos\MSA-Phase-Two\bin\Debug\netcoreapp3.1\View\public\web.config
