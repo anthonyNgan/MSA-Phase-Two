@@ -6,10 +6,9 @@ import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/sty
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import ToggleButton from '@material-ui/lab/ToggleButton';
-import {Button} from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 import AppMenu from '../src/components/AppMenu/AppMenu';
 import Dashboard from '../src/components/Dashboard/Dashboard';
@@ -23,7 +22,7 @@ import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 const PageDashboard = () => <Dashboard />
 const PageChiropractors = () => <Chiropractors />
 const PagePatients = () => <Patients />
-const PageHealing = () => <Healing/>
+const PageHealing = () => <Healing />
 
 
 
@@ -35,7 +34,7 @@ const App: React.FC = () => {
             type: darkMode ? "dark" : "light",
         },
     });
-    
+
     const { loginWithRedirect } = useAuth0();
     const { logout, user } = useAuth0();
     //clsx allows us to compose string class names
@@ -45,18 +44,18 @@ const App: React.FC = () => {
                 <BrowserRouter>
                     <div className={clsx('App', classes.root)}>
                         <CssBaseline />
-                        <Drawer variant="permanent" classes={{paper: classes.drawerPaper,}}>
+                        <Drawer variant="permanent" classes={{ paper: classes.drawerPaper, }}>
                             <AppMenu />
                             <ToggleButton selected={darkMode} onChange={() => setDarkMode(!darkMode)}>DarkMode</ToggleButton>
                             <SocialMedia />
-                            <Button onClick={() => logout({returnTo: window.location.origin})}>Log Out {user.nickname}</Button>
+                            <Button onClick={() => logout({ returnTo: window.location.origin })}>Log Out {user.nickname}</Button>
                         </Drawer>
                         <main className={classes.content}>
                             <Container maxWidth="lg" className={classes.container}>
                                 <Switch>
                                     <Route path="/" exact component={PageDashboard} />
                                     <Route path="/chiropractors" exact component={PageChiropractors} />
-                                    <Route path="/orders" component={PageHealing} />
+                                    <Route path="/healing" component={PageHealing} />
                                     <Route path="/patients" component={PagePatients} />
                                 </Switch>
                             </Container>
@@ -91,7 +90,7 @@ const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(4),
         paddingBottom: theme.spacing(4),
     },
-   
+
 }));
 
 
